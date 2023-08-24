@@ -37,6 +37,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .nav-links {
@@ -153,6 +156,14 @@ a:hover {
 .hamburger-icon.open span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
 }
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
 
 /* SECTIONS */
 
@@ -162,6 +173,7 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+  background: linear-gradient(135deg, #f6f6f6, #e0e0e0);
 }
 
 .section-container {
@@ -278,6 +290,17 @@ section {
 .btn-container {
   gap: 1rem;
 }
+.btn:hover {
+  transform: scale(1.05);
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.icon:hover {
+  transform: translateY(-3px);
+   transform: scale(1.2);
+  
+}
 
 /* ABOUT SECTION */
 
@@ -324,6 +347,7 @@ section {
 .section-container {
   gap: 4rem;
   height: 80%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 .section__pic-container {
